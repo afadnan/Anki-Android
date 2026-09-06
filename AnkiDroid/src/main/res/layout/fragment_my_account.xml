@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="15dp"
+                android:padding="8dp"
                 android:gravity="top"
                 >
                 <!-- TODO JS choose a standardized padding to use here -->
@@ -56,8 +56,8 @@
 
                 <ImageView
                     android:id="@+id/login_logo"
-                    android:layout_width="326dp"
-                    android:layout_height="238dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="172dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="@dimen/input_layout_padding"
                     app:srcCompat="@drawable/login_logo" />
@@ -69,6 +69,12 @@
                     android:hint="@string/username"
                     app:endIconMode="clear_text"
                     app:errorEnabled="true"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopStart="24dp"
+                    app:boxCornerRadiusTopEnd="24dp"
+                    app:boxCornerRadiusBottomStart="24dp"
+                    app:boxCornerRadiusBottomEnd="24dp"
+
                     android:layout_marginHorizontal="@dimen/input_layout_padding">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -89,17 +95,34 @@
                     android:hint="@string/password"
                     app:endIconMode="password_toggle"
                     app:errorEnabled="true"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopStart="24dp"
+                    app:boxCornerRadiusTopEnd="24dp"
+                    app:boxCornerRadiusBottomStart="24dp"
+                    app:boxCornerRadiusBottomEnd="24dp"
                     android:layout_marginHorizontal="@dimen/input_layout_padding">
 
                     <com.ichi2.ui.TextInputEditField
                         android:id="@+id/password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/ic_baseline_lock_24"
                         android:drawablePadding="8dp"
-                        android:inputType="textPassword"
-                        />
+                        android:drawableStart="@drawable/ic_baseline_lock_24"
+                        android:inputType="textPassword" />
+
                 </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/reset_password_button"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:text="@string/reset_password"
+                    android:textSize="@dimen/abc_text_size_button_material" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/login_button"
@@ -110,19 +133,6 @@
                     tools:text="Log in"
                     android:enabled="false"
                     android:layout_margin="@dimen/content_vertical_padding"/>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/reset_password_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:textSize="@dimen/abc_text_size_button_material"
-                    style="@style/Widget.Material3.Button.TextButton"
-                    android:singleLine="true"
-                    android:padding="3dp"
-                    android:layout_gravity="center"
-                    android:text="@string/reset_password"
-                    />
 
                 <com.ichi2.ui.FixedTextView
                     android:id="@+id/no_account_text"
@@ -149,7 +159,7 @@
                     android:background="@null"
                     android:textSize="@dimen/abc_text_size_button_material"
                     style="@style/Widget.Material3.Button.TextButton"
-                    android:padding="3dp"
+                    android:padding="1dp"
                     android:layout_gravity="center"
                     android:singleLine="true"
                     android:text="@string/sign_up" />
@@ -162,7 +172,7 @@
                     android:background="@null"
                     android:textSize="@dimen/abc_text_size_button_material"
                     style="@style/Widget.Material3.Button.TextButton"
-                    android:padding="3dp"
+                    android:padding="1dp"
                     android:layout_gravity="center"
                     android:singleLine="true"
                     android:text="@string/help_title_privacy" />
@@ -174,7 +184,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/abc_text_size_button_material"
                     style="@style/Widget.Material3.Button.TextButton"
-                    android:padding="3dp"
+                    android:padding="1dp"
                     android:layout_gravity="center"
                     android:singleLine="true"
                     android:text="@string/lost_mail_instructions" />
